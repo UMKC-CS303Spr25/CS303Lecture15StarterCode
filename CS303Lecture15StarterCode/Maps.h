@@ -75,13 +75,12 @@ class Map {
 		void insert(const Key& key, const Value& value) {
 			std::cout << "\n\nCode Map Insert\n";
 			// Search by key
- 
+			auto it = theMap.find(Pair<Key, Value>(key, Value()));
 
 			// Key exists - need to remove and reinsert to update
- 
-			
+
 			// use emplace to add key,value combination
-			 
+
 		}
 
 		//TASK 7
@@ -89,7 +88,8 @@ class Map {
 		//POST: uses the set command find with the given value
 		//      if found, return a reference to the location of the value 
 		//      so it can be modified
-		// 
+		//      if not found, add a key & value
+		//         then return a reference to the location of that value
 		Value& operator[](const Key& key) { 
 			auto it = theMap.find(Pair<Key, Value>(key, Value()));
 			if (it != theMap.end()) {
@@ -107,7 +107,7 @@ class Map {
 		//      if found, erase the value at the iterator 
 		void erase(const Key& key) {
 			std::cout << "\n\nCode Map Erase\n";
- 
+
 		}
 
 };

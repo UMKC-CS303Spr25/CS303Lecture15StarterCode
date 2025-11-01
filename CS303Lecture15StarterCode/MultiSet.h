@@ -46,9 +46,8 @@ multiset<string> operator+(
 	const multiset<string>& right) {
 
 	std::cout << "\n\nFind the Union of 2 multisets using + \n";
-	
+	std::multiset<string> result(left);
 
-
-	return left;
+	return result;
 }
 

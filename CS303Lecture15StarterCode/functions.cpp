@@ -38,7 +38,6 @@ void processBuild(Map<std::string, list<int>>& wordMap) {
 
 		//make each word lower case & add to the map
 
-
 	}
 	inFile.close();
 }

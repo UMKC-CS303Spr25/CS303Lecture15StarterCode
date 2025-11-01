@@ -1,6 +1,6 @@
 // CS303Lecture15a.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
+//https://github.com/UMKC-CS303Spr25/CS303Lecture15StarterCode
 #include <iostream>
 #include <set>
 #include <string>
@@ -14,7 +14,7 @@ int main()
 	cout << "\n\nUSING SETS\n";
 
 	set<string> set1{ "hello", "see ya", "later", "alligator" };
-	set<string> set2(set1);
+	set<string> set2(set1);				//copy constructor
 	set<string> set3{ "123", "456" };
 	set<string> set4;
 
@@ -23,6 +23,7 @@ int main()
 	set2.insert("later");
 	set3.insert(set2.begin(), set2.end());
 	set3.insert("789");
+	set3.erase("123");
 
 	//The overloaded '<<' operator is provided
 	cout << set1 << endl;
@@ -51,6 +52,7 @@ int main()
 	cout << "\n\n" << contains(set1, string("ace")) << endl;
 	cout << "\n\n" << contains(set3, string("123")) << endl;
 
+	/*
 
 	cout << "\n\nCOMPLETE MULTISETS CLASS\n";
 	//multisets are in <set>
@@ -93,14 +95,14 @@ int main()
 	cout << "\nMap size: " << ages.size() << endl;
 	cout << "Contains Alice? " << (ages.contains("Alice") ? "Yes" : "No") << endl;
 
-
+	 
 	//TASK 9: Complete index build
 	cout << "\n\nAPPLYING MAPS\n";
 
 	Map<string, list<int>> newMap;
 	processBuild(newMap);
 	newMap.print(2);
-
+	*/
 	return 0;
 }
 

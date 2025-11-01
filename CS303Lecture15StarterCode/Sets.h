@@ -39,9 +39,10 @@ std::set<Key_Type, Compare> operator+(
         const std::set<Key_Type, Compare>& right) {
 
     std::cout << "\n\nCode: Find the Union using +\n";
+    std::set<Key_Type, Compare> result(left);
+    result.insert(right.begin(), right.end());
 
-
-    return left;
+    return result;
 }
 
 //TASK 2
